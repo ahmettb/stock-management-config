@@ -1,6 +1,8 @@
 spring:
   application:
     name: eureka-server
+  profiles:
+    active: localhost  
 
 #server:
 #  port: 8761
@@ -17,7 +19,7 @@ eureka:
   instance:
     appname: eureka-server
     hostname: eureka-server   #localhost
-
+    prefer-ip-address: true
   client:
     register-with-eureka: false
     fetch-registry: false
@@ -36,12 +38,12 @@ spring:
 
 
 info:
-  component: Eureka Server - Github - Localhost
+  component: Eureka Server - Github - Stage
 eureka:
   instance:
     appname: eureka-server
     hostname: eureka-server   #localhost
-
+    prefer-ip-address: true
   client:
     register-with-eureka: false
     fetch-registry: false
