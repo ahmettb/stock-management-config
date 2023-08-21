@@ -8,9 +8,7 @@ spring:
 #  port: 8761
 ---
 spring:
-  config:
-    activate:
-      on-profile: localhost
+  profiles: localhost
 
 
 info:
