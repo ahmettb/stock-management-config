@@ -14,11 +14,11 @@ spring:
 
 
 info:
-  component: Eureka Server - Github - Localhost
+  componenet: Eureka Server - Github - Localhost
 eureka:
   instance:
     appname: eureka-server
-    hostname: eureka-server   #localhost
+    hostname: eureka-server   
     prefer-ip-address: true
   client:
     register-with-eureka: false
@@ -27,7 +27,7 @@ eureka:
       default-zone: http://${eureka.instance.hostname}:${server.port}/eureka
 
 server:
-  port: 8763
+  port:  8763
 
 ---
 
@@ -38,7 +38,7 @@ spring:
 
 
 info:
-  component: Eureka Server - Github - Stage
+  componenet: Eureka Server - Github - Stage
 eureka:
   instance:
     appname: eureka-server
