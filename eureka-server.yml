@@ -8,11 +8,15 @@ spring:
 #  port: 8761
 ---
 spring:
-  profiles: localhost
+  config:
+    activate:
+      on-profile: localhost
 
 
 info:
-  componenet: Eureka Server - Github - Localhost
+  component: Eureka Server - Github - Localhost
+
+
 eureka:
   instance:
     appname: eureka-server
@@ -25,7 +29,7 @@ eureka:
       default-zone: http://${eureka.instance.hostname}:${server.port}/eureka
 
 server:
-  port:  8763
+  port: 8763
 
 ---
 
@@ -36,7 +40,9 @@ spring:
 
 
 info:
-  componenet: Eureka Server - Github - Stage
+  component: Eureka Server - Github - Stage
+
+  
 eureka:
   instance:
     appname: eureka-server
