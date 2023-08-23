@@ -12,12 +12,13 @@ server:
   port: 9788
 logging:
   level:
-    root: debug
+    root:
+    com.dockerproduct: DEBUG
 ---
 spring:
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
+  #mvc:
+   # pathmatch:
+   #   matching-strategy: ant_path_matcher
   config:
     activate:
       on-profile: localhost
@@ -39,10 +40,9 @@ spring:
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
-
   client:
     service-url:
-      default-zone: http://localhost:8761/eureka
+      default-zone: http://localhost:8761/eureka/
 
 ---
 spring:
